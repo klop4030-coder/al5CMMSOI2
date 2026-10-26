@@ -76,7 +76,7 @@ end)
 repeat task.wait() until KeyValidated
 
 -- ================================================================
--- [ تشغيل الخدمات الأساسية ]
+-- [ تشغيل الخدمات الأساسية والواجهة ]
 -- ================================================================
 local Workspace = game:GetService("Workspace")
 local UserInputService = game:GetService("UserInputService")
@@ -283,37 +283,4 @@ MainStroke.Thickness = 3
 local Header = Instance.new("Frame", Main)
 Header.Name = "Header"
 Header.Size = UDim2.new(1, 0, 0, 52)
-Header.BackgroundColor3 = RedTheme.Panel
-Header.BorderSizePixel = 0
-Header.Active = true
-Header.ZIndex = 2
-Instance.new("UICorner", Header).CornerRadius = UDim.new(0, 18)
-
-local OverlapLogoBg = Instance.new("Frame", Main)
-OverlapLogoBg.Name = "OverlapLogoBg"
-OverlapLogoBg.Size = UDim2.new(0, 70, 0, 70)
-OverlapLogoBg.Position = UDim2.new(0, -12, 0, -14)
-OverlapLogoBg.BackgroundColor3 = RedTheme.Background
-OverlapLogoBg.ZIndex = 10
-Instance.new("UICorner", OverlapLogoBg).CornerRadius = UDim.new(1, 0)
-
-local OverlapLogoStroke = Instance.new("UIStroke", OverlapLogoBg)
-OverlapLogoStroke.Thickness = 3.5
-OverlapLogoStroke.Color = RedTheme.Accent
-
-local HeaderLogo = Instance.new("ImageLabel", OverlapLogoBg)
-HeaderLogo.Size = UDim2.new(1, -6, 1, -6)
-HeaderLogo.Position = UDim2.new(0, 3, 0, 3)
-HeaderLogo.BackgroundTransparency = 1
-HeaderLogo.Image = "rbxassetid://98971861944581"
-HeaderLogo.ZIndex = 11
-Instance.new("UICorner", HeaderLogo).CornerRadius = UDim.new(1, 0)
-
-local Title = Instance.new("TextLabel", Header)
-Title.Size = UDim2.new(1, -80, 1, 0)
-Title.Position = UDim2.new(0, 72, 0, 0)
-Title.BackgroundTransparency = 1
-Title.RichText = true
-Title.Text = 'SAIRO SYSTEM <font color="#FF0A2D">V69.9</font>'
-Title.TextColor3 = Colors.White
-Title.Text
+Header
